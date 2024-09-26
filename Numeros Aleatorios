@@ -1,0 +1,27 @@
+def centros_al_cuadrado(seed, n):
+    random_numbers = []
+    for _ in range(n):
+        seed = str(seed**2).zfill(8)
+        mid = len(seed) // 2
+        seed = int(seed[mid-2:mid+2])
+        random_numbers.append(seed)
+    return random_numbers
+
+
+seed = 1234
+numeros_centros = centros_al_cuadrado(seed, 100)
+print(numeros_centros)
+
+def medios_cuadrados(seed, n):
+    random_numbers = []
+    for _ in range(n):
+        seed = str(seed**2).zfill(8)
+        mid = len(seed) // 2
+        seed = int(seed[mid-2:mid+2])
+        random_numbers.append(seed)
+    return random_numbers
+
+
+seed = 5678
+numeros_medios = medios_cuadrados(seed, 100)
+print(numeros_medios)
